@@ -168,3 +168,6 @@ evaluation*.json
 generations*.json
 
 playground/
+results/
+references_humaneval.json
+models/
