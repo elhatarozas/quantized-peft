@@ -275,8 +275,8 @@ def main():
         elif args.load_in_4bit:
             print("Loading model in 4bit")
             model_kwargs["load_in_4bit"] = args.load_in_4bit
-            model_kwargs["torch_dtype"] = torch.float16
-            model_kwargs["bnb_4bit_compute_dtype"] = torch.float16            
+            model_kwargs["torch_dtype"] = torch.bfloat16
+            model_kwargs["bnb_4bit_compute_dtype"] = torch.bfloat16            
             model_kwargs["device_map"] = {"": accelerator.process_index}
         else:
             print(f"Loading model in {args.precision}")
